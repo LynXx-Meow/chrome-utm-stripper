@@ -46,7 +46,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 [Urchin Logo](http://www.openclipart.org/detail/69997) by Jordan Irwin / Deluge.
 
-[release page]: https://github.com/LynXx-Meow/firefox-token-stripper/releases
+[release page]: https://github.com/LynXx-Meow/firefox-token-stripper/releases/latest
 [Firefox Add-ons]: https://addons.mozilla.org
 [utm]: https://en.wikipedia.org/wiki/UTM_parameters
 [addons]: https://addons.mozilla.org/addon/utm-tracking-token-stripper/

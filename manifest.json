@@ -1,13 +1,13 @@
 {
-	"name": "Tracking Token Stripper",
-	"version": "2.3",
+	"name": "Token Stripper",
+	"version": "2.3.1",
 	"manifest_version": 2,
-	"author": "Jon Parise",
-	"description": "Removes Google Analytics (UTM), Google and Facebook click tracking tokens from URL query strings.",
-	"homepage_url": "https://github.com/jparise/chrome-utm-stripper",
+	"author": "LynXx",
+	"description": "Strip tracking tokens from URL query strings",
+	"homepage_url": "https://github.com/LynXx-Meow/firefox-token-stripper",
 	"icons" :{
-		"48" : "icon-48.png",
-		"128" : "icon-128.png"
+		"48" : "icons/48.png",
+		"128" : "icons/128.png"
 	},
 	"background": {
 		"scripts": ["background.js"]

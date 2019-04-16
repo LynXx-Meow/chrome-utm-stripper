@@ -1,41 +1,54 @@
 # Tracking Token Stripper
+This is a Firefox browser extension that strips Google Analytics
+(i.e. [Urchin Tracking Monitor][utm]) tokens, Google and Facebook click
+tracking identifiers, and some other tracking tokens from URL query strings. This is done *before* the web request is made and results in both more private browsing as well as more aesthetically pleasing URLs.
 
-This is a Chrome and Firefox browser extension that strips Google Analytics
-(i.e. [Urchin Tracking Monitor][utm]) tokens, and Google and Facebook click
-tracking identifiers, from URL query strings. This is done *before* the web
-request is made and results in both more private browsing as well as more
-aesthetically pleasing URLs.
+## Getting Started
+### Installing
+1. Download the latest version of the addon from the [release page]
+2. Open `about:addons` and select `Ìnstall Add-on From File...` from the cog menu (top-right)
+3. Select `token_stripper-<version>-fx.xpi`
+4. Click "Add" when prompted for permission to install the extension
 
-Install from the [Chrome Web Store][store] or [Firefox Add-ons][addons].
+**Note:** [Firefox Add-ons] version coming SOON™ !
 
-The following query string parameters are stripped:
+## Add-on information
+### Stripped query string parameters
+The following tracking tokens are stripped when browsing URLs :
 
- - fbclid
- - gclid
- - mkt_tok
- - utm_source
- - utm_medium
- - utm_term
- - utm_campaign
- - utm_content
- - utm_cid
- - utm_reader
- - utm_referrer
- - utm_name
+| Source | Stripped Tokens |
+| :---: | :--- |
+| Facebook | fbclid |
+| Google | gclid |
+| Google Analytics<br />([UTM]) | utm_campaign<br />utm_cid<br />utm_content<br />utm_medium<br />utm_name<br />utm_reader<br />utm_referrer<br />utm_source<br />utm_term |
+| HumbleBundle | hmb_campaign<br />hmb_medium<br />hmb_source |
+| MailChimp | mc_cid<br />mc_eid |
+| Other | ICID *(experimental, might break some websites)* <br />mkt_tok<br />xtref |
 
-This extension requires these [permissions][]:
+### Permissions
+This extension requires the following [permissions] :
+ - `webRequest`, to use the [`webRequest` API][webRequest]
+ - `webRequestBlocking`, to use `webRequest` in a blocking fashion
+ - `http://*/*?*`, to filter HTTP URLs
+ - `https://*/*?*`, to filter HTTPS URLs
 
- - `webRequest`, to use the [`chrome.webRequest` API][webRequest]
- - `webRequestBlocking`, to use `chrome.webRequest` in a blocking fashion
- - `http://*/*?*`, to filter http URLs
- - `https://*/*?*`, to filter https URLs
+## Contributing
+Feel free to submit a [pull request](https://github.com/LynXx-Meow/firefox-token-stripper/pulls) to improve this extension. :)
+
+## Authors
+* **Jon Parise** - *Initial work* - [jparise](https://github.com/jparise)
+* **LynXx** - *Remove more tracking tokens* - [LynXx](https://github.com/LynXx-Meow)
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 [![Urchin Logo](icon-128.png "Urchin Logo")](http://www.openclipart.org/detail/69997)
 
 [Urchin Logo](http://www.openclipart.org/detail/69997) by Jordan Irwin / Deluge.
 
+[release page]: https://github.com/LynXx-Meow/firefox-token-stripper/releases
+[Firefox Add-ons]: https://addons.mozilla.org
 [utm]: https://en.wikipedia.org/wiki/UTM_parameters
-[store]: https://chrome.google.com/webstore/detail/kcpnkledgcbobhkgimpbmejgockkplob
 [addons]: https://addons.mozilla.org/addon/utm-tracking-token-stripper/
-[permissions]: https://developer.chrome.com/extensions/declare_permissions
-[webRequest]: https://developer.chrome.com/extensions/webRequest
+[permissions]: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions
+[webRequest]: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest

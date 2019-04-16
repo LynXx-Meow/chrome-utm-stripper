@@ -5,12 +5,19 @@ tracking identifiers, and some other tracking tokens from URL query strings. Thi
 
 ## Getting Started
 ### Installing
+*This extension will be available SOON™ in the [Firefox Add-ons] catalog !*
+#### Automated install
+1. Download the latest version of the addon from the [release page]
+2. Allow "github.com" to install software on your computer when prompted
+3. Click "Add" when prompted for permission to install the extension
+
+#### Manual install
 1. Download the latest version of the addon from the [release page]
 2. Open `about:addons` and select `Ìnstall Add-on From File...` from the cog menu (top-right)
 3. Select `token_stripper-<version>-fx.xpi`
 4. Click "Add" when prompted for permission to install the extension
 
-**Note:** [Firefox Add-ons] version coming SOON™ !
+**Note:** You must set `xpinstall.signatures.required` to `false` in `about:config` when building the `.xpi` package yourself !
 
 ## Add-on information
 ### Stripped query string parameters

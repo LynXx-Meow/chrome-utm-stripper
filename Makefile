@@ -1,2 +1,2 @@
-store.zip:
-	zip store.zip LICENSE README.md background.js icon-*.png manifest.json
+xpi:
+	zip tokenstripper-unsigned.xpi LICENSE README.md background.js icons/*.png manifest.json
